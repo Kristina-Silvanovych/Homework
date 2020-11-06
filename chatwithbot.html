@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let phrases = [
+        "Наш менеджер перезвонит Вам в ближайшее время!",
+        "Уточнить детали можно по телефону 123456789",
+        "Оставайтесь на связи!",
+        "Сегодня прекрасная погода!",
+        "С Вами очень приятно общаться!",
+      ];
+      let js = [
+        "В JavaScript есть много методов для работы со строкой",
+        "Массивы в JavaScript похожи на объекты",
+        "Массивы в JavaScript, как обычные, так и ассоциативные, являются объектами встроенного ссылочного типа  Array",
+        "Kласс объектов Math является контейнером для различных математических функций",
+      ];
+      let php = [
+        "У PHP низкий порог входа",
+        "PHP поглощает перевод каретки после закрывающего тэга ?>",
+        "NaN соответствует True",
+        "PHP имеет неточности с плавающей точкой",
+      ];
+      let html = [
+        "В свойстве border-radius можно использовать slash-синтаксис.",
+        "Свойство font-weight может принимать «относительные» значения",
+        "Свойство vertical-align работает по разному в ячейках таблиц и других элементах",
+        "Вы можете использовать «невалидные» символы в качестве разделителей в перечне классов элемента",
+      ];
+      while (true) {
+        let que = prompt("Введите вопрос!");
+        if (que == "Привет") {
+          alert("Привет");
+        } else if (que == "Ты кто?") {
+          alert("Я бот Вася");
+        } else if (que == "Пока") {
+          alert("До свидания, рад был пообщаться!");
+          break;
+        } else {
+          que = que.toLowerCase();
+          if (que.indexOf("javascript") == -1) {
+            alert("Я хочу беседовать о JavaScript!");
+            let randomIndex = Math.floor(Math.random() * js.length);
+            alert(js[randomIndex]);
+          } else {
+            let randomIndex = Math.floor(Math.random() * js.length);
+            alert(js[randomIndex]);
+          }
+          if (que.indexOf("php") >= 0) {
+            alert("Я хочу беседовать о PHP!");
+            let randomIndex = Math.floor(Math.random() * php.length);
+            alert(php[randomIndex]);
+          } else {
+            let randomIndex = Math.floor(Math.random() * php.length);
+            alert(php[randomIndex]);
+          }
+
+          //let randomIndex = Math.floor(Math.random() * phrases.length);
+          //alert(phrases[randomIndex]);
+        }
+      }
+    </script>
+  </body>
+</html>

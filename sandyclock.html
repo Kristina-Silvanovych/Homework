@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onLoad="Ticker()">
+    <span id="time"></span>
+    <script>
+      let newh = prompt("Введите нужное Вам время в часах");
+      let newm = prompt("Введите нужное Вам время в минутах");
+      let news = prompt("Введите нужное Вам время в секундах");
+      //function Sandyclock(newh, newm) {
+      let clockh = new Date().getHours();
+      let clockm = new Date().getMinutes();
+      let clocks = new Date().getSeconds();
+      let deltah = newh - clockh;
+      let deltam = newm - clockm;
+      let deltas = news - clocks;
+      let second = deltah * 3600 + deltam * 60 + deltas;
+      alert("Пройдет " + second);
+      let tick = true;
+      let t;
+      let counter = second;
+      function Ticker(second) {
+        if (tick) {
+          document.getElementById("time").innerHTML = "Осталось: " + counter;
+          tick = false;
+          counter--;
+        } else {
+          document.getElementById("time").innerHTML = "Осталось: " + counter;
+          tick = true;
+          counter--;
+        }
+        if (counter <= -1) {
+          clearInterval(t);
+          document.getElementById("time").innerHTML = "Время истекло!";
+        }
+      }
+      Ticker(second);
+      t = setInterval(Ticker, 1000, second);
+    </script>
+  </body>
+</html>

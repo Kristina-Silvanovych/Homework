@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Сколько ответов?");
+      let questions = [
+        "Что мне взять с собой на каток?",
+        "Что надо положить в холодильник?",
+        "Что мне взять с собой в школу?",
+        "Чтомне взять с собой в бассейн?",
+        "Что мне скушать?",
+      ];
+      let answers = [
+        "Коньки",
+        "Полотенца",
+        "Учебники",
+        "Творог",
+        "Суп",
+      ];
+      function getRandom(n, questions, answers) {
+          let que = Math.floor(Math.random() * questions);
+          //alert(questions[que]);
+          for (let i=0; i < n; i++){
+          let an = Math.floor(Math.random() * answers);
+          alert(answers[an]);
+          }
+        return questions[que];
+        }
+        let get = getRandom(n, questions, answers);
+        alert(get);
+    </script>
+  </body>
+</html>

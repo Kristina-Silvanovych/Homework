@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        "А роза упала на лапу Азора",
+        "Ого",
+        "А Собака боса",
+        "Привет мир",
+        "А Собака боса",
+        "Лёша на полке клопа нашёл",
+        "Я — арка края",
+      ];
+
+      function Reverse(str) {
+        // let arr2 = str.split("");
+        // alert(arr2);
+        // arr2.reverse();
+        // alert(arr2);
+        // let rstr = arr2.join("");
+        //alert(rstr);
+        //return rstr;
+        //let temp = str.split("").reverse().join("");
+        return str.split("").reverse().join("");
+      }
+      //alert(Reverse("Привет мир"));
+
+      function Filter(str) {
+        str = str.split("").join("").toLowerCase();
+        // let rstr = Reverse(str);
+        // if (str.toLowerCase() == rstr.toLowerCase()) {
+        //   return true;
+        // } else return false;
+        return str == Reverse(str) ? true : false;
+      }
+      alert(Filter("Лёша на полке клопа нашёл"));
+    </script>
+  </body>
+</html>

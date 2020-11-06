@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onLoad="Ticker()">
+    <span id="time"></span>
+    <script>
+      alert("Вы находитесь на странице: …");
+      let limit = 2;
+      let tick = true;
+      let t;
+      let seconds = 0;
+      let minutes = 0;
+      let counter = seconds;
+      function Ticker(seconds) {
+        if (tick) {
+          document.getElementById("time").innerHTML =
+            "Прошло: " + minutes + " минут " + counter + " секунд ";
+          tick = false;
+          counter++;
+        } else {
+          document.getElementById("time").innerHTML =
+            "Прошло: " + minutes + " минут " + counter + " секунд ";
+          tick = true;
+          counter++;
+        }
+        if (counter == 60) {
+          //clearInterval(t);
+          minutes++;
+          counter = 0;
+          document.getElementById("time").innerHTML =
+            "Прошло: " + minutes + " минут " + counters + " секунд ";
+        }
+        if (minutes == 2) {
+          clearInterval(t);
+          document.getElementById("time").innerHTML = "Страница устарела!";
+        }
+      }
+      Ticker(seconds);
+      clearInterval(t);
+      t = setInterval(Ticker, 1000, seconds);
+    </script>
+  </body>
+</html>
