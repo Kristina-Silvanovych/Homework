@@ -6,14 +6,12 @@ let spam = "spam";
 function check(str) {
   str = str.toLowerCase();
   let p = str.indexOf("spam");
-  for (var count = 0; p != -1; count++) {
-    if (str.indexOf("spam") != -1) {
-      let n = str.replace("spam", "***");
-      p = str.indexOf("spam", p + 4);
-      return true, n;
-    } else {
-      return false;
-    }
+  if (str.indexOf("spam") != -1) {
+    let n = str.replace("spam", "***");
+    p = str.indexOf("spam", p + 4);
+    return n;
+  } else {
+    return false;
   }
   //return str.search(spam.toLowerCase()) >= 0 ? true : false;
 }
