@@ -5,7 +5,7 @@ function check(str) {
   if (str.length > n) {
     let s = str.substr(0, 6);
     let p = str.lastIndexOf(" ", 6);
-    if (p != 0) {
+    if (p > 0) {
       c = str.substr(0, p) + "...";
     } else {
       c = s + "...";
