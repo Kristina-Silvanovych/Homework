@@ -6,12 +6,12 @@ function check(str) {
     let s = str.substr(0, 6);
     let p = str.lastIndexOf(" ", 6);
     if (p != 0) {
-      c = alert(str.substr(0, p) + "...");
+      c = str.substr(0, p) + "...";
     } else {
-      c = alert(s + "...");
+      c = s + "...";
     }
-    return s + "...";
   }
+  return c;
 }
 let str1 = prompt("Enter a sentence");
 alert(check(str1));
