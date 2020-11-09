@@ -7,32 +7,27 @@
   </head>
   <body>
     <script>
-      let n = prompt("Сколько ответов?");
+     let an;
+      let que;
+      let n = +prompt("Сколько ответов?");
       let questions = [
         "Что мне взять с собой на каток?",
         "Что надо положить в холодильник?",
         "Что мне взять с собой в школу?",
-        "Чтомне взять с собой в бассейн?",
-        "Что мне скушать?",
+        "Что мне взять с собой в бассейн?",
+        "Что мне взять в поездку?",
       ];
-      let answers = [
-        "Коньки",
-        "Полотенца",
-        "Учебники",
-        "Творог",
-        "Суп",
-      ];
-      function getRandom(n, questions, answers) {
-          let que = Math.floor(Math.random() * questions);
-          //alert(questions[que]);
-          for (let i=0; i < n; i++){
-          let an = Math.floor(Math.random() * answers);
-          alert(answers[an]);
-          }
-        return questions[que];
-        }
-        let get = getRandom(n, questions, answers);
-        alert(get);
+      let answers = ["Коньки", "Полотенца", "Учебники", "Творог", "Суп"];
+      function getRandom(arr) {
+        que = Math.floor(Math.random() * arr.length);
+        return arr[que];
+      }
+      let get = getRandom(questions);
+      alert(get);
+      for (let i = 0; i < n; i++) {
+        let an = getRandom(answers);
+        alert(an);
+      }
     </script>
   </body>
 </html>
