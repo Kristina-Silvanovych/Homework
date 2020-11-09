@@ -51,7 +51,7 @@
             let randomIndex = Math.floor(Math.random() * js.length);
             alert(js[randomIndex]);
           }
-          if (que.indexOf("php") >= 0) {
+          if (que.indexOf("php") == -1) {
             alert("Я хочу беседовать о PHP!");
             let randomIndex = Math.floor(Math.random() * php.length);
             alert(php[randomIndex]);
@@ -59,9 +59,14 @@
             let randomIndex = Math.floor(Math.random() * php.length);
             alert(php[randomIndex]);
           }
-
-          //let randomIndex = Math.floor(Math.random() * phrases.length);
-          //alert(phrases[randomIndex]);
+          if (que.indexOf("html") == -1) {
+            alert("Я хочу беседовать о HTML!");
+            let randomIndex = Math.floor(Math.random() * html.length);
+            alert(html[randomIndex]);
+          } else {
+            let randomIndex = Math.floor(Math.random() * html.length);
+            alert(html[randomIndex]);
+          }
         }
       }
     </script>
